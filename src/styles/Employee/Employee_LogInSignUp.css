@@ -10,7 +10,7 @@
 }
 body{
     background-color: red;
-    background: url("../images/1.jpg");
+    background: url("../../images/1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -38,7 +38,12 @@ body{
     color: white;
     font-size: 25px;
     font-weight: 600;
+    text-decoration: none;
 }
+.nav-logo a {
+    text-decoration: none; 
+    color: inherit; 
+  }
 .nav-menu ul{
     display: flex;
 }
@@ -86,11 +91,11 @@ body{
     align-items: center;
     justify-content: center;
     width: 512px;
-    height: 420px;
+    height: 510px;
     overflow: hidden;
     z-index: 2;
 }
-.login-container{
+/* .login-container{
     position: absolute;
     left: 4px;
     width: 500px;
@@ -105,7 +110,24 @@ body{
     display: flex;
     flex-direction: column;
     transition: .5s ease-in-out;
+} */
+.container {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    transition: .5s ease-in-out;
 }
+
+.login-container {
+    position: absolute;
+    left: 4px;
+}
+
+.register-container {
+    position: absolute;
+    left: 10px; /* Adjust this value based on your layout */
+}
+
 .top span{
     color: #fff;
     font-size: small;
@@ -151,6 +173,8 @@ header{
     top: -35px;
     left: 17px;
     color: #fff;
+    font-size: 16px; 
+
 }
 .submit{
     font-size: 15px;
