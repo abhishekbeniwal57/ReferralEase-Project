@@ -1,15 +1,15 @@
 package com.example.Project1.Dto;
 
-public class LoginDTO {
+public class EmployeeLoginDTO {
 	private String email;
 	private String password;
 	
-	public LoginDTO(String email, String password) {
+	public EmployeeLoginDTO(String email, String password) {
 		this.email = email;
 		this.password = password;
 	}
 
-	public LoginDTO() {
+	public EmployeeLoginDTO() {
 		
 	}
 	
@@ -33,9 +33,5 @@ public class LoginDTO {
 	public String toString() {
 		return "LoginDTO [email=" + email + ", password=" + password + "]";
 	}
-	
-	
-	
-	
 	
 }

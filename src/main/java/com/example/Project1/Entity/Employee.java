@@ -6,38 +6,61 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+
 
 @Entity
-@Table(name="user")
-public class User {
+@Table(name="employee")
+public class Employee {
 
 	@Id
-	@Column(name="user_id",length=45)
+	@Column(name="user_id")
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int userid;
 	
 	@Column(name="user_firstname", length= 255)
+	@NotBlank
+	@Size(max=255)
 	private String firstname;
 	
 	@Column(name="user_lastname", length= 255)
+	@NotBlank
+	@Size(max=255)
 	private String lastname;
 	
+	@Column(name="company_name", length= 255)
+	@NotBlank
+	@Size(max=255)
+	private String companyname;
+	
 	@Column(name="user_email", length= 255)
+	@NotBlank
+	@Email
+	@Size(max=255)
 	private String email;
 	
 	@Column(name="user_password", length= 255)
+	@NotBlank
+	@Size(max=255)
 	private String password;
+	
+	@Column(name="level")
+	private String level;
 
-	public User(int userid, String firstname, String lastname, String email, String password) {
-//		super();
+	public Employee(int userid, String firstname, String lastname, String companyname, String email, String password,String level) {
 		this.userid = userid;
 		this.firstname = firstname;
 		this.lastname = lastname;
+		this.companyname = companyname;
 		this.email = email;
 		this.password = password;
+		this.level = level;
+
 	}
-	
-	public User() {
+
+	public Employee() {
 		
 	}
 
@@ -65,6 +88,14 @@ public class User {
 		this.lastname = lastname;
 	}
 
+	public String getCompanyname() {
+		return companyname;
+	}
+	
+	public void setCompanyname(String companyname) {
+		this.companyname = companyname;
+	}
+
 	public String getEmail() {
 		return email;
 	}
@@ -80,12 +111,21 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	
+	public String getLevel() {
+		return level;
+	}
+	
+	public void setLevel(String level)
+	{	
+		this.level = level;
+	}
 
 	@Override
 	public String toString() {
-		return "User [userid=" + userid + ", firstname=" + firstname + ", lastname=" + lastname + ", email=" + email
-				+ ", password=" + password + "]";
+		return "Employee [userid=" + userid + ", firstname=" + firstname + ", lastname=" + lastname + ", companyname="
+				+ companyname + ", email=" + email + ", password=" + password + ", level=" + level + "]";
 	}
-	
+
 	
 }

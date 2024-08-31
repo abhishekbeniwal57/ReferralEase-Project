@@ -1,18 +1,13 @@
 package com.example.Project1.Repo;
 
-import java.util.Optional;
-
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.stereotype.Repository;
 
-import com.example.Project1.Entity.User;
+import com.example.Project1.Entity.Company;
 
 @EnableJpaRepositories
 @Repository
-public interface UserRepo extends JpaRepository<User,Integer> {
-
-	Optional<User> findOneByEmailAndPassword(String email,String password);
+public interface CompanyRepository extends JpaRepository<Company, Long> {
 	
-	User findByEmail(String email);
 }

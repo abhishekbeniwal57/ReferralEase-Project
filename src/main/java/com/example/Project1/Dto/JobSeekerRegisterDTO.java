@@ -1,19 +1,18 @@
 package com.example.Project1.Dto;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
-public class UserDTO {
-
+public class JobSeekerRegisterDTO {
+	
+//	@JsonIgnore
 	private int userid;
 	private String firstname;
 	private String lastname;
 	private String email;
+//	@JsonIgnore
 	private String password;
 	
-	public UserDTO(int userid, String firstname, String lastname, String email, String password) {
+	public JobSeekerRegisterDTO(int userid, String firstname, String lastname, String email, String password) {
 		this.userid = userid;
 		this.firstname = firstname;
 		this.lastname = lastname;
@@ -21,7 +20,7 @@ public class UserDTO {
 		this.password = password;
 	}
 
-	public UserDTO() {
+	public JobSeekerRegisterDTO() {
 		
 	}
 
@@ -70,7 +69,5 @@ public class UserDTO {
 		return "UserDTO [userid=" + userid + ", firstname=" + firstname + ", lastname=" + lastname + ", email=" + email
 				+ ", password=" + password + "]";
 	}
-	
-	
 	
 }
