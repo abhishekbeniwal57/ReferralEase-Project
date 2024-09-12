@@ -115,4 +115,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Contact
 
-For any questions or support, please contact [abhishekbeniwal57@example.com](mailto:abhishekbeniwal57@example.com).
+For any questions or support, please contact [abhishekbeniwal57@gmail.com](mailto:abhishekbeniwal57@gmail.com).
